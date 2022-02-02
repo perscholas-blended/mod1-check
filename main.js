@@ -12,15 +12,44 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+// const onlySedans = carBrands.filter(car => car.type ==  "sedan")
+
+// console.log(onlySedans) //works
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
 
+// let reversed = ""
+
+// function reverseString (word){
+//   for (let i = word.length - 1; i >= 0; i--){
+//     reversed += word[i];
+//   }
+//   return reversed;
+
+// }
+
+
+// console.log(reverseString('cat')) // works
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+
+// function longest (arr) {
+//   let maxString = arr[0];
+//   for (let i = 1; i < arr.length; i++){
+//     if (arr[i].length > maxString.length){
+//       maxString = arr[i];
+//     }
+//   }
+//   return maxString;
+
+// }
+// console.log(longest(["hello", "hi", "whatsup", "ok", "lalaalala"])) // works
 
 // 4.
 // Using Reduce,
@@ -36,8 +65,18 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
-console.log(shop(wishlist));
+function shop(arr) {
+  const prices = arr.map
+
+  const total = arr.reduce((a, c) => {
+    a + c.price;
+   
+  })
+  return total
+
+
+}
+console.log(shop(wishlist)); 
 
 
 
@@ -48,6 +87,7 @@ console.log(shop(wishlist));
 //Also, if you cannot explain any of them, we have failed as 
 //instructors and you will be banished to the nether realms.
 
+// Polymorphism is one of the key concepts of object oriented programming. It is the ability of any data to be processed in more than one form. It allows us to perform a single action in multiple ways. 
 
 /*  6.
  * flipBool takes an array of Boolean values
@@ -59,7 +99,11 @@ console.log(shop(wishlist));
  * then return the new array
  * Be sure to use map()!
  */
-const flipBool = (arr) => {};
+// const flipBool = (arr) => {
+//   return arr.map(bool => bool == false? true : false);
+// };
+
+// console.log(flipBool([true, false, true, true, false])) //works
 
 // 7.
 //FEAST OR FAMINE
@@ -69,3 +113,10 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+// function feastOrFamine (animal, food) {
+//   return animal[0] == food[0] && animal.charAt(animal.length -1) == food.charAt(food.length -1)
+
+// }
+
+// console.log(feastOrFamine ("great blue herobn", "garlic naanpn")) //works
