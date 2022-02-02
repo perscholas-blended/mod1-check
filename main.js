@@ -3,14 +3,19 @@
 // output =>
 //  { brand: 'Toyota', model: 'camry', type: 'sedan' },
 //   { brand: 'Hyundai', model: 'Sonata', type: 'sedan' }
-const carBrands = [
-  { brand: "Ford", model: "mustang", type: "convertible" },
-  { brand: "Toyota", model: "camry", type: "sedan" },
-  { brand: "Ram", model: "1500", type: "pickup" },
-  { brand: "Hyundai", model: "Sonata", type: "sedan" },
-  { brand: "Jeep", model: "wrangler", type: "suv" },
-  { brand: "Nissan", model: "frontier", type: "pickup" },
-];
+// const carBrands = [
+//   { brand: "Ford", model: "mustang", type: "convertible" },
+//   { brand: "Toyota", model: "camry", type: "sedan" },
+//   { brand: "Ram", model: "1500", type: "pickup" },
+//   { brand: "Hyundai", model: "Sonata", type: "sedan" },
+//   { brand: "Jeep", model: "wrangler", type: "suv" },
+//   { brand: "Nissan", model: "frontier", type: "pickup" },
+// ];
+console.log(carBrands.filter("Sedan"))
+for (let i = 0; i <= carBrands.length; i++ ){
+  return i.type = 'sedan'
+}
+//this is wrong, I know, I was trying so many things out and deleted them all
 
 /* 2.
  * reverseString takes a string
@@ -22,13 +27,20 @@ const carBrands = [
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
 
+
+// arr = [ "Hello", "my", "name", "is", "Demmy", "Rodriguez", "Quiroz"]
+
+// for (let i = 0; i <= arr.length; i++ ){
+//   console.log(arr.length)
+// }
+
 // 4.
 // Using Reduce,
 // Given an array of all your wishlist items, figure out
 // how much it would cost to just buy everything at once
 // In other words, the total of all the prices in the array
 // of objects
-// The output should eqaute to 227005
+// The output should equate to 227005
 let wishlist = [
   { title: "tesla", price: 90000 },
   { title: "tesla", price: 45000 },
@@ -37,7 +49,7 @@ let wishlist = [
   { title: "tesla", price: 90000 },
 ];
 function shop(arr) {}
-console.log(shop(wishlist));
+// console.log(shop(wishlist));
 
 
 
@@ -69,3 +81,13 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+function first(animal, food) {
+  if (animal[0] === food[0] && (animal.length - 1) === (food.length - 1)){
+  return animal[0] + animal.length - 1
+  }
+  else {
+    return false
+  }
+}
+first('Dog', 'Hotdog')
