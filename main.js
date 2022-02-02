@@ -12,15 +12,47 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+let sed = carBrands.filter(cars => cars.type == "sedan");  //filters the cars with type "sedan"
+console.log(sed);  //prints the car details with type "sedan"
+
+
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
 
+
+function reverseString(str) {
+  let revStr = "";   //empty string
+  let len = str.length -1 ; //assigning length of the string to len
+  for(let i = len ; i >= 0; i--) {    //start from end of string and iterate through to the start of the string
+    revStr += str[i];     // adds characters from the string to the reverse string
+  }
+  return revStr;
+}
+console.log(reverseString('hello'));
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+
+let arr = ["First string", "Second string", "Third string","Longest string"];
+
+
+function longStr(str) {
+  let lonStr = "";
+  for(let i = 0; i< str.length; i++) {
+     if(str[i].length > lonStr.length) {
+       lonStr = str[i];
+     }
+  }
+  return lonStr;
+}
+let finStr = longStr(arr);
+console.log(finStr);
+
 
 // 4.
 // Using Reduce,
@@ -29,6 +61,7 @@ const carBrands = [
 // In other words, the total of all the prices in the array
 // of objects
 // The output should eqaute to 227005
+
 let wishlist = [
   { title: "tesla", price: 90000 },
   { title: "tesla", price: 45000 },
@@ -36,10 +69,14 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+
+function shop(arr) {
+let totalPrice = arr.reduce((oldPrice, newPrice) => {
+    return oldPrice + newPrice.price  },0);
+    return totalPrice;
+}
+
 console.log(shop(wishlist));
-
-
 
 
 //5. OOP has 4 pillars and we learned about each in this phase. 
@@ -47,6 +84,32 @@ console.log(shop(wishlist));
 //and explain it in simple terms with an example.
 //Also, if you cannot explain any of them, we have failed as 
 //instructors and you will be banished to the nether realms.
+
+class Mobile {
+  constructor(brand,color) {
+    this.brand = brand;
+    this.color = color;
+    this.carrier = "ATT";
+  }
+  
+  carrier() {
+    this.carrier = "Verizon";
+  }
+}
+
+  class Apple extends Mobile {
+    constructor(brand,color) {
+      this.brand = brand;
+      this.color = color;
+      this.memory = memory;
+    }
+    model() {
+      console.log("This is a new model from Apple");
+    }
+  }
+ let app = new Apple("Apple","Blue","256G");
+ app.model();
+
 
 
 /*  6.
@@ -69,3 +132,10 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+// let animal;
+// let food;
+
+
+
+          
