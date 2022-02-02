@@ -115,7 +115,12 @@ console.log(shop(wishlist)); //works
 // > output => `"gn"`
 
 // function feastOrFamine (animal, food) {
-//   return animal[0] == food[0] && animal.charAt(animal.length -1) == food.charAt(food.length -1)
+//   if (animal[0] == food[0] && animal.charAt(animal.length -1) == food.charAt(food.length -1)) {
+//     return animal[0] + animal.charAt(animal.length -1)
+//   }
+//   else {
+//     return false
+//   }
 
 // }
 
