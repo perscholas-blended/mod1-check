@@ -75,23 +75,23 @@ console.log(shop(wishlist));
 //Also, if you cannot explain any of them, we have failed as
 //instructors and you will be banished to the nether realms.
 
-  encapsulation: encapsulating data from user
-class student(){
-  constructor (){
-    let name;
-    let mark;
-  }
-  getname(){
-    return this.name;
-  }
-  setname(){
-    this.name=name;
-  }
-}
-var student1= new student();
-student1.setname("vedha");
-student1.getname();
-console.log(student1.getname());
+//   encapsulation: encapsulating data from user
+// class student(){
+//   constructor (){
+//     let name;
+//     let mark;
+//   }
+//   getname(){
+//     return this.name;
+//   }
+//   setname(){
+//     this.name=name;
+//   }
+// }
+// var student1= new student();
+// student1.setname("vedha");
+// student1.getname();
+// console.log(student1.getname());
 
 /*  6.
  * flipBool takes an array of Boolean values
@@ -120,12 +120,10 @@ flipBool([false, true, true, false]);
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
 
-
-function feastfamine(str1,str2){
-  if((str1[0]===str2[0]) && (str1[str1.length-1]=== str2[str2.length-1]){
-    return 
-    str1[0]+str1[str1.length-1];
-  }else{
+function feastfamine(str1, str2) {
+  if (str1[0] === str2[0] && str1[str1.length - 1] === str2[str2.length - 1]) {
+    return (newstring = str1[0] + str1[str1.length - 1]);
+  } else {
     return false;
   }
 }
