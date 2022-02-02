@@ -53,17 +53,13 @@ let wishlist = [
   { title: "tesla", price: 90000 },
 ];
 
-
-console.log(wishlist.price)
-
-
-function shop(arr) {
-// not done
+function shop(array) {
+  const price = array.reduce((accumulator,currentVal)=>{
+    return accumulator + currentVal.price;
+  },0);
+  return price;
 }
 console.log(shop(wishlist));
-
-
-
 
 //5. OOP has 4 pillars and we learned about each in this phase. 
 //Choose the pillar you are most comfortable with 
