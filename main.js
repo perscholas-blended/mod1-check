@@ -40,7 +40,6 @@ console.log(reverseString('hello'));
 
 let arr = ["First string", "Second string", "Third string","Longest string"];
 
-
 function longStr(str) {
   let lonStr = "";
   for(let i = 0; i< str.length; i++) {
@@ -95,12 +94,11 @@ class Mobile {
   carrier() {
     this.carrier = "Verizon";
   }
-}
+}     // Inheritance is one the 4 pillars of OOP. In inheritance child class inherits all the properties of the parent class which provides reusability.
 
   class Apple extends Mobile {
-    constructor(brand,color) {
-      this.brand = brand;
-      this.color = color;
+    constructor(brand,color,memory) {
+      super(brand,color);
       this.memory = memory;
     }
     model() {
@@ -122,7 +120,10 @@ class Mobile {
  * then return the new array
  * Be sure to use map()!
  */
-const flipBool = (arr) => {};
+
+const flipBool = arr =>  arr.map((bool) => !bool); //it flips the values of array to it's opposite value
+let arr1 = [true,false,true];
+console.log(flipBool(arr1));
 
 // 7.
 //FEAST OR FAMINE
@@ -133,8 +134,20 @@ const flipBool = (arr) => {};
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
 
-// let animal;
-// let food;
+
+ function matchStr(animal,food) {
+ let charAnim = animal[0] + animal.slice(-1);   //slices first and last character of animal and joins them together in charAnim
+ let charFood = food[0] + food.slice(-1);      //slices first and last character of food and joins them together in charFood
+
+ if(charAnim == charFood) {    
+   return charAnim;
+ } else {
+   return false;
+ }
+}
+console.log(matchStr('Hello','Hero'));
+console.log(matchStr("hello","world"));
+
 
 
 
