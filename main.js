@@ -75,23 +75,23 @@ console.log(shop(wishlist));
 //Also, if you cannot explain any of them, we have failed as
 //instructors and you will be banished to the nether realms.
 
-//   encapsulation: encapsulating data from user
-// class student(){
-//   constructor (){
-//     let name;
-//     let mark;
-//   }
-//   getname(){
-//     return this.name;
-//   }
-//   setname(){
-//     this.name=name;
-//   }
-// }
-// var student1= new student();
-// student1.setname("vedha");
-// student1.getname();
-// console.log(student1.getname());
+  encapsulation: encapsulating data from user
+class student(){
+  constructor (){
+    let name;
+    let mark;
+  }
+  getname(){
+    return this.name;
+  }
+  setname(){
+    this.name=name;
+  }
+}
+var student1= new student();
+student1.setname("vedha");
+student1.getname();
+console.log(student1.getname());
 
 /*  6.
  * flipBool takes an array of Boolean values
