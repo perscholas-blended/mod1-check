@@ -12,16 +12,40 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+const filtertype = carBrands.filter((eachitem) => {
+  return eachitem.type == "sedan";
+});
+console.log(filtertype);
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
-
+function reverseString(string1) {
+  for (let i = string1.length - 1; i >= 0; i--) {
+    console.log(string1[i]);
+  }
+}
+reverseString("vedha");
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
 
+function longestString(string3) {
+  let splitstring = string3.split(" ");
+  let length1 = 0;
+  let longstring;
+  for (let i = 0; i < splitstring.length; i++) {
+    if (splitstring[i].length > length1) {
+      length1 = splitstring[i].length;
+    }
+    longestString = splitstring[i];
+  }
+  return longestString;
+}
+
+console.log(longestString(" Life is fragile and temporary"));
 // 4.
 // Using Reduce,
 // Given an array of all your wishlist items, figure out
@@ -36,18 +60,38 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+function shop(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total = total + arr[i].price;
+  }
+  return total;
+}
 console.log(shop(wishlist));
 
-
-
-
-//5. OOP has 4 pillars and we learned about each in this phase. 
-//Choose the pillar you are most comfortable with 
+//5. OOP has 4 pillars and we learned about each in this phase.
+//Choose the pillar you are most comfortable with
 //and explain it in simple terms with an example.
-//Also, if you cannot explain any of them, we have failed as 
+//Also, if you cannot explain any of them, we have failed as
 //instructors and you will be banished to the nether realms.
 
+  encapsulation: encapsulating data from user
+class student(){
+  constructor (){
+    let name;
+    let mark;
+  }
+  getname(){
+    return this.name;
+  }
+  setname(){
+    this.name=name;
+  }
+}
+var student1= new student();
+student1.setname("vedha");
+student1.getname();
+console.log(student1.getname());
 
 /*  6.
  * flipBool takes an array of Boolean values
@@ -59,7 +103,13 @@ console.log(shop(wishlist));
  * then return the new array
  * Be sure to use map()!
  */
-const flipBool = (arr) => {};
+const flipBool = (arr) => {
+  let arr1 = arr.map((item) => {
+    return !item;
+  });
+  console.log(arr1);
+};
+flipBool([false, true, true, false]);
 
 // 7.
 //FEAST OR FAMINE
@@ -69,3 +119,14 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+
+function feastfamine(str1,str2){
+  if((str1[0]===str2[0]) && (str1[str1.length-1]=== str2[str2.length-1]){
+    return 
+    str1[0]+str1[str1.length-1];
+  }else{
+    return false;
+  }
+}
+console.log(feastfamine("great blue heron", "garlic naan"));
