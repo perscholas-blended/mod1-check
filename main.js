@@ -3,24 +3,41 @@
 // output =>
 //  { brand: 'Toyota', model: 'camry', type: 'sedan' },
 //   { brand: 'Hyundai', model: 'Sonata', type: 'sedan' }
-const carBrands = [
-  { brand: "Ford", model: "mustang", type: "convertible" },
-  { brand: "Toyota", model: "camry", type: "sedan" },
-  { brand: "Ram", model: "1500", type: "pickup" },
-  { brand: "Hyundai", model: "Sonata", type: "sedan" },
-  { brand: "Jeep", model: "wrangler", type: "suv" },
-  { brand: "Nissan", model: "frontier", type: "pickup" },
-];
+// const carBrands = [
+//   { brand: "Ford", model: "mustang", type: "convertible" },
+//   { brand: "Toyota", model: "camry", type: "sedan" },
+//   { brand: "Ram", model: "1500", type: "pickup" },
+//   { brand: "Hyundai", model: "Sonata", type: "sedan" },
+//   { brand: "Jeep", model: "wrangler", type: "suv" },
+//   { brand: "Nissan", model: "frontier", type: "pickup" },
+// ];
+
+// let sedans = document. 
+
+
 
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
+function reverseString(str) {
+  const splitString = str.split ("")
+  const reverseArray = splitString.reverse();
+  const joinArray = reverseArray.join("")
+  return joinArray;
+}
+reverseString("hello");
 
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+// let array = ['house', 'phone', 'bathroom', 'bedroom', 'shower', 'kitchen']
+
+// const longString = array.filter((array.length > 8) => {
+//   return longString
+// })
+// console.log(longString)
 
 // 4.
 // Using Reduce,
@@ -29,15 +46,15 @@ const carBrands = [
 // In other words, the total of all the prices in the array
 // of objects
 // The output should eqaute to 227005
-let wishlist = [
-  { title: "tesla", price: 90000 },
-  { title: "tesla", price: 45000 },
-  { title: "tesla", price: 5 },
-  { title: "tesla", price: 2000 },
-  { title: "tesla", price: 90000 },
-];
-function shop(arr) {}
-console.log(shop(wishlist));
+// let wishlist = [
+//   { title: "tesla", price: 90000 },
+//   { title: "tesla", price: 45000 },
+//   { title: "tesla", price: 5 },
+//   { title: "tesla", price: 2000 },
+//   { title: "tesla", price: 90000 },
+// ];
+// function shop(arr) {}
+// console.log(shop(wishlist));
 
 
 
@@ -59,7 +76,7 @@ console.log(shop(wishlist));
  * then return the new array
  * Be sure to use map()!
  */
-const flipBool = (arr) => {};
+// const flipBool = (arr) => {};
 
 // 7.
 //FEAST OR FAMINE
