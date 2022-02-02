@@ -12,15 +12,41 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+
+const filterCarBrands = carBrands.filter(carBrands => carBrands.type === 'sedan');
+    console.log(filterCarBrands);
+
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
 
+const string = 'cat';
+let newString = ' ';
+for (let i = string.length - 1; i >= 0; i--){
+  newString += string[i];
+}
+console.log(newString);
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+
+let stringArray = ['the girl in the purple dress'];
+
+function longestStringArray() {
+  let string = string.split('');
+  let longestString = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i].length > longestString) {
+	  longestString = string[i].length;
+     }
+  }
+  console.log(longestString);
+}
+
 
 // 4.
 // Using Reduce,
@@ -36,10 +62,14 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
-console.log(shop(wishlist));
+function shop() {
+  
+  const total = price.reduce((acc, value) => {
+  return (acc + value);
+  }, 
+  );
 
-
+console.log(total);
 
 
 //5. OOP has 4 pillars and we learned about each in this phase. 
@@ -69,3 +99,5 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+}
