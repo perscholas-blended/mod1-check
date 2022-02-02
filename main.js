@@ -12,7 +12,7 @@
 //   { brand: "Nissan", model: "frontier", type: "pickup" },
 // ];
 
-// let sedans = document. 
+let sedans = document. 
 
 
 
@@ -34,10 +34,10 @@ reverseString("hello");
 // and returns the longest string in the array
 // let array = ['house', 'phone', 'bathroom', 'bedroom', 'shower', 'kitchen']
 
-// const longString = array.filter((array.length > 8) => {
-//   return longString
-// })
-// console.log(longString)
+const longString = array.filter((array.length > 8) => {
+  return longString
+})
+console.log(longString)
 
 // 4.
 // Using Reduce,
@@ -53,8 +53,8 @@ reverseString("hello");
 //   { title: "tesla", price: 2000 },
 //   { title: "tesla", price: 90000 },
 // ];
-// function shop(arr) {}
-// console.log(shop(wishlist));
+function shop(arr) {}
+console.log(shop(wishlist));
 
 
 
