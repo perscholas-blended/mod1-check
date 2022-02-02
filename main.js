@@ -67,16 +67,16 @@ let wishlist = [
 ];
 function shop(arr) {
 
+  let totalPrice = 0;
 
-  const total = arr.reduce((a, c) => {
-    a + c.price;
-   
-  })
-  return total
+  for (let i = 0; i < arr.length; i++){
+    totalPrice += arr[i].price 
+  }
+  return totalPrice;
 
 
 }
-console.log(shop(wishlist)); 
+console.log(shop(wishlist)); //works
 
 
 
