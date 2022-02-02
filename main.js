@@ -66,7 +66,7 @@ let wishlist = [
   { title: "tesla", price: 90000 },
 ];
 function shop(arr) {
-  const prices = arr.map
+
 
   const total = arr.reduce((a, c) => {
     a + c.price;
