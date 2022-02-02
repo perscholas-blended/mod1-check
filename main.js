@@ -11,16 +11,32 @@ const carBrands = [
   { brand: "Jeep", model: "wrangler", type: "suv" },
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
+let newCar= carBrands.filter(function (carBrands) {
+  return carBrands.type === 'sedan' 
+})
 
+console.log(newCar)
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
+function reverse(str){
+  let reverseArray = str.split("").reverse().join(""); 
+  return reverseArray;
+}
+console.log(reverse('cat'))
 
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+
+let sgtPeppers = ['we','hope', 'you','will','enjoy','the','show']
+
+let longest = sgtPeppers.reduce((a, b) => a.length > b.length ? a : b);
+
+console.log(longest);
+
 
 // 4.
 // Using Reduce,
@@ -36,7 +52,14 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+
+
+console.log(wishlist.price)
+
+
+function shop(arr) {
+// not done
+}
 console.log(shop(wishlist));
 
 
