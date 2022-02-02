@@ -12,15 +12,45 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+let carType =[];
+for (let i = 0; i < carBrands.length; i++) {
+  if (carBrands[i].type !== "sedan") {
+      carType.push(carBrands[i]);
+  }
+} console.log(carType)
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
 
+function reverseString(string) {
+  let newString = "";
+  for (let i = string.length - 1; i >= 0; i--) { 
+      newString += string[i]; 
+  }
+  return newString;  
+}
+console.log(reverseString('Jonathan'));
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+
+
+let word = findLongestWord(["Helsinki","PanamaCity","Borabora", "Kakkerlak", "Scheveningen", "DarEsSalaam", "Perth", "Ulanbataar", "Johannesburg"]);
+
+function findLongestWord(array) {
+  let longestWord = "";
+  array.forEach(function(word) {
+    if(word.length > longestWord.length) {
+      longestWord = word;
+    }
+  });
+  return longestWord;
+}
+console.log(word); 
 
 // 4.
 // Using Reduce,
@@ -36,9 +66,21 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+function shop(arr) {
+  let newPrice = [];
+  for (let i = 0; i < wishlist.length; i++) {
+    if (newPrice = arr[i].price + newPrice)
+  }
+}
 console.log(shop(wishlist));
 
+
+// let carType =[];
+// for (let i = 0; i < carBrands.length; i++) {
+//   if (carBrands[i].type !== "sedan") {
+//       carType.push(carBrands[i]);
+//   }
+// } console.log(carType)
 
 
 
@@ -48,6 +90,7 @@ console.log(shop(wishlist));
 //Also, if you cannot explain any of them, we have failed as 
 //instructors and you will be banished to the nether realms.
 
+Encapsulation is a way to bind together the data and method to manipulate them.  
 
 /*  6.
  * flipBool takes an array of Boolean values
@@ -69,3 +112,4 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
