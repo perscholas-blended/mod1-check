@@ -12,16 +12,30 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+const sedanCar = carBrands.filter((objects)=>
+  objects.type == "sedan"
+)
+console.log(sedanCar)
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
-
+const reverseString=(s)=> s.split("").reverse().join("")  //reverse is only used for array so need to convert string to array
+console.log(reverseString('cat'))
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
 
+const longestString = (arrayStrings) => {
+  let longestS = arrayStrings[0]
+  for (s of arrayStrings){
+    if (s.length >= longestS.length){longestS = s}
+  }
+  return longestS
+}
+const arrayS=['hello','buy','love','strong']
+console.log(longestString(arrayS))
 // 4.
 // Using Reduce,
 // Given an array of all your wishlist items, figure out
@@ -36,17 +50,20 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+const shop=(arr)=>{
+  return arr.reduce((accu, current) => ({price : accu.price + current.price}))
+}
+
 console.log(shop(wishlist));
-
-
-
 
 //5. OOP has 4 pillars and we learned about each in this phase. 
 //Choose the pillar you are most comfortable with 
 //and explain it in simple terms with an example.
 //Also, if you cannot explain any of them, we have failed as 
 //instructors and you will be banished to the nether realms.
+
+ //one of the pillars is inheritance, child extends the trails from ancestors, such as all cars has color but each car has different shape
+ //Inheritance is a parent-child relationship where we create a new class by using existing class code. It is just like saying that “A is type of B”. For example is “Apple is a fruit”, “Ferrari is a car”
 
 
 /*  6.
@@ -59,7 +76,12 @@ console.log(shop(wishlist));
  * then return the new array
  * Be sure to use map()!
  */
-const flipBool = (arr) => {};
+const flipBool = (arr) => {
+  const newArray= arr.map(x=> !x)
+  return newArray
+};
+
+console.log(flipBool([false,true, false,true]))
 
 // 7.
 //FEAST OR FAMINE
@@ -69,3 +91,15 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+const  matchLetters =(animal, food)=>{
+  //remove space
+  animal = animal.replace(/ /g,'')
+  food = food.replace(/ /g,'')  //g means global
+  if (animal.toLowerCase().length > 2 && food.toLowerCase().length >2){
+    if (animal[0] == food[0] && animal[animal.length-1] == food[food.length-1]){
+      return (animal[0]+animal[animal.length-1])
+    }
+  }
+}
+
+console.log(matchLetters("preat blue heron", "parlic naan"))
