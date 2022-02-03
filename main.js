@@ -11,6 +11,12 @@ const carBrands = [
   { brand: "Jeep", model: "wrangler", type: "suv" },
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
+// fuction checkSedan(objArray){
+  let strReverse = "",
+// Okay this part I wasn't sure if I had set this up properly 
+  for(let i=strilength-1;i>= 0:i =-1;)
+}
+//Need to look more into google and in my notes, to complete the rest, but I will definetly practice more on this, since for not this is as far as I can go.
 
 /* 2.
  * reverseString takes a string
@@ -18,9 +24,23 @@ const carBrands = [
  * e.g., reverseString('cat') => 'tac'
  */
 
+function reverseString(str) {
+  Let strReverse ="";
+  for (let i = str,length-1:i >=0;i =1){
+    strReverse = strReverse + str[i];
+  }
+}
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+straArray = ['Dont Yuck My Yum", "chicken feet", "Dooby", "Elllooo"]
+//Don't Yuck My Yum is the longest string that should return
+//This next part I had trouble making it work, but I am strting to get somewhat the hang of it
+   let islongest = 0;
+   let longestString= '';
+   for (let i = 0; i <= strArrayylength =1; i +=1)
+   //I'm surely a bit better at this then I was in the last couple of days. Again I understand most of it but I still need practice on keeping up with the direction I should take.
 
 // 4.
 // Using Reduce,
@@ -69,3 +89,5 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+                                                                                                                                                                                                                                                              
